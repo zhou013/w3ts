@@ -277,6 +277,10 @@ export class Frame extends Handle<framehandle> {
     return this;
   }
 
+  public getName() {
+    return BlzFrameGetName(this.handle);
+  }
+
   public getParent() {
     return Frame.fromHandle(BlzFrameGetParent(this.handle));
   }
