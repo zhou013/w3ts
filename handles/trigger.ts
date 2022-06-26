@@ -386,6 +386,10 @@ export class Trigger extends Handle<trigger> {
     return BlzTriggerRegisterFrameEvent(this.handle, frame.handle, eventId);
   }
 
+  public registerFrameEvent(frame: Frame, eventId: frameeventtype) {
+    this.triggerRegisterFrameEvent(frame, eventId);
+  }
+
   public static fromEvent() {
     return this.fromHandle(GetTriggeringTrigger());
   }
